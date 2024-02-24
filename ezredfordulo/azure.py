@@ -1,8 +1,10 @@
 import os
+from pathlib import Path
 
 
 SITE_TITLE = "Ezredfordulo.hu"
 SECRET_KEY = os.getenv('SECRET_KEY')
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
@@ -20,6 +22,7 @@ DATABASES = {
 }
 CONN_MAX_AGE = 120
 
+STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "static/")
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
