@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'menus',
     'treebeard',
     'sekizai',
+    'easy_thumbnails',
+    'filer',
+    'djangocms_file',
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
     'django.contrib.admin',
@@ -94,6 +97,7 @@ CMS_TEMPLATES = [
 X_FRAME_OPTIONS = "SAMEORIGIN"
 
 WSGI_APPLICATION = 'ezredfordulo.wsgi.application'
+FILER_CANONICAL_URL = 'sharing/'
 
 
 # Database

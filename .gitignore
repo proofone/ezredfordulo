@@ -81,3 +81,4 @@ web_modules/
 # Ignore all local history of files
 **/.history
 package-lock.json
+filer_public/**/*
