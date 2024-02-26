@@ -22,7 +22,7 @@ DATABASES = {
 }
 CONN_MAX_AGE = 120
 
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "collected_static"
 STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "static/")
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
