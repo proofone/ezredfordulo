@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'palyazat.apps.PalyazatConfig',
-    'django.contrib.sites',
     'cms',
     'menus',
     'treebeard',
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
 ]
 
@@ -91,7 +91,8 @@ TEMPLATES = [
 ]
 
 CMS_TEMPLATES = [
-    ('home.html', 'Home page template'),
+    ('home.html', 'Főoldal sablon'),
+    ('announcement.html', 'Hirdetmény sablon'),
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"

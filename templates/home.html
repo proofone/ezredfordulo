@@ -1,23 +1,5 @@
+{% extends "base.html" %}
 {% load cms_tags sekizai_tags static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% page_attribute "page_title" %}</title>
-    <script src="{% static "bootstrap5.bundle.min.js" %}"></script>
-    <link rel="stylesheet" href="{% static "bootstrap5.min.css" %}">
-    {% render_block "css" %}
-</head>
-<body>
-    {% cms_toolbar %}
-    <div id="main-container" class="container-fluid p-0">
-        <div class="row mx-0">
-            <div id="content" class="col-12 col-md-8 col-xl-6 offset-md-2 offset-xl-3">
-                {% placeholder "content" %}
-            </div>
-        </div>
-    </div>      
-    {% render_block "js" %}
-</body>
-</html>
+{% block content %}
+    {% placeholder "content" %}
+{% endblock content %}                
