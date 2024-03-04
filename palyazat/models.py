@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from djangocms_text_ckeditor.fields import HTMLField
 
 
 kiiras_status_choices = (('draft', "Vázlat"), ('public', "Publikus"), ('canceled', "Visszavont"))
@@ -20,7 +21,9 @@ class Kiiras(models.Model):
 
     title = models.CharField("Cím", max_length=100)
     description = models.TextField("Tartalom", blank=True)
-    status = models.TextField(choices=kiiras_status_choices)
+    status = models.TextField(choices=kiiras_status_choices, default='draft')
     pub_date = models.DateTimeField("Publikáció ideje", blank=True, null=True)
     deadline = models.DateTimeField("Beadási határidő", blank=True, null=True)
     
+    def __str__(self) -> str:
+        return self.title

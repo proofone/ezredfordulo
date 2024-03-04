@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'djangocms_file',
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
+    'djangocms_versioning',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

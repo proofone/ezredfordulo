@@ -18,6 +18,7 @@ djangocms-admin-style==3.3.0
 djangocms-text-ckeditor==5.1.5
 djangocms-file==3.0.1
 djangocms-frontend==1.2.2
+djangocms-versioning==2.0.0
 
 docutils==0.20.1
 easy-thumbnails==2.8.5
