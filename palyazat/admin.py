@@ -1,5 +1,5 @@
 from django.contrib import admin
-from palyazat.models import User
+from palyazat.models import User, Kiiras
 
 
 class UserAdmin(admin.ModelAdmin):
@@ -7,4 +7,9 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ['email']
 
 
+class KiirasAdmin(admin.ModelAdmin):
+    exclude =  []
+
+
 admin.site.register(User, UserAdmin)
+admin.site.register(Kiiras, KiirasAdmin)
