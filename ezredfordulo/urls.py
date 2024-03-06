@@ -19,6 +19,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.conf.urls.i18n import i18n_patterns
+from palyazat.cms_apps import urls as palyazat_urls
+
 
 urlpatts = [
     path('filer/', include('filer.urls')),
@@ -26,6 +28,8 @@ urlpatts = [
     path("admin/", admin.site.urls),
     path("", include("cms.urls")),
     ]
+
+urlpatts = palyazat_urls + urlpatts
 
 if settings.DEBUG:
     urlpatts.extend(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
