@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load cms_tags sekizai_tags static %}
+{% block content %}
+    <h1 class="h1">Aktuális pályázataink</h1>
+    {% include "palyazat/list_inner.html" with object_list=object_list %}
+{% endblock content %}                

@@ -1,0 +1,10 @@
+<div class="vstack">
+    {% for p in object_list %}
+    <a href="{% url "kiiras" pk=p.pk %}" class="text-decoration-none"><div class="my-3 border-1 border-bottom">
+        <div class="h3">{{ p.title }}</div> 
+        <div>{{ p.description|truncatechars:50 }}</div>
+    </div></a>
+    {% empty %}
+        <div>Jelenleg nincsenek pályázatok.</div>
+    {% endfor %}
+</div>
